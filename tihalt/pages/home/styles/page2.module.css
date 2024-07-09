@@ -1,0 +1,19 @@
+.description {
+    text-align: justify;
+    list-style: 1.7;
+    vertical-align: baseline;
+}
+
+.container {
+    position: relative;
+    z-index: 3;
+}
+
+.body {
+    background-color: white;
+    padding-bottom: 5vh;
+}
+
+.title {
+    text-align: center;
+}

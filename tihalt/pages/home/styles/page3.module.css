@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.body {
+    background-size: cover;
+    background-position: center bottom;
+    background-image: url(https://tihalt.com/wp-content/uploads/2018/03/half-service-bg.jpg);
+    z-index: 1;
+    height: auto;
+    padding-bottom: 5vh;
+    border-bottom: 1px solid #2c5192;
+}
+
+.container {
+    padding-top: 12vh !important;
+    height: 100%;
+}
+
+.title {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.description {
+    color: #babdff;
+    text-align: justify;
+    font-weight: 400;
+    font-size: 1.0rem;
+}
+
+.line {
+    width: 50px;
+    height: 1px;
+    background-color: white;
+
+}

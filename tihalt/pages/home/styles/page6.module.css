@@ -1,0 +1,42 @@
+.body {
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: auto;
+    background-image: url(https://tihalt.com/wp-content/uploads/2018/03/timeline-bg.jpg);
+    padding: 10vh 0;
+    backface-visibility: hidden;
+    background-size: cover;
+    position: relative;
+    will-change: opacity;
+    
+}
+
+.animatedElement {
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    will-change: transform, opacity;
+}
+
+.body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: inherit;
+    z-index: -1;
+    will-change: opacity;
+}
+
+.line {
+    height: rem(15px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    z-index: 3;
+}
