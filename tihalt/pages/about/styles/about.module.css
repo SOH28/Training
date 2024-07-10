@@ -1,0 +1,10 @@
+.body {
+    background-size: cover;
+    background-position: center center;
+    background-image: url(https://tihalt.com/wp-content/uploads/2018/03/page-title-bg-3.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: rem(500px)
+}

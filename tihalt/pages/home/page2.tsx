@@ -38,7 +38,7 @@ export default function Page2() {
             <Container size="xl" visibleFrom="xs" className={classes.container}>
                 <Group justify="space-between" align="stretch" >
                     {info.map((item: IInfo, index: number) => (
-                        <Stack align="inherit" gap="lg" style={{
+                        <Stack align="inherit" gap="lg" key={index} style={{
                             width: rem('280px'),
                             color: '#383838'
                         }}>
@@ -62,7 +62,7 @@ export default function Page2() {
             <Container size="xl" hiddenFrom="xs" className={classes.container}>
                 <Stack gap="lg">
                     {info.map((item: IInfo, index: number) => (
-                        <Stack align="inherit" gap="lg" style={{
+                        <Stack align="inherit" key={index} gap="lg" style={{
                             width: '100%',
                             color: '#383838'
                         }}>

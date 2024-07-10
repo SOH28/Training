@@ -63,7 +63,7 @@ export default function Page6() {
                         width: '49%'
                     }}>
                         {roadmap.map((item: Roadmap, index: number) => (
-                            <Group gap="lg" justify='flex-end' align='stretch'>
+                            <Group gap="lg" key={index} justify='flex-end' align='stretch'>
                                 <Text fw={700} size='md' style={{
                                     color: select == index ? 'white' : '#a6aafb',
                                     transition: 'all',
@@ -137,7 +137,7 @@ export default function Page6() {
                         width: '20%'
                     }}>
                         {roadmap.map((item: Roadmap, index: number) => (
-                            <Group gap="lg" justify='flex-end' align='stretch'>
+                            <Group gap="lg" key={index} justify='flex-end' align='stretch'>
                                 <Text fw={500} 
                                 onClick={() => setSelect(index)}
                                 style={{

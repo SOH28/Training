@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faFacebook, faInstagram, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import Logo from '../../public/logo.webp'
+import Link from 'next/link';
 
 const links = [
   { link: '/home', label: 'Home' },
@@ -19,7 +20,7 @@ export default function Nav(props: any) {
   const [active, setActive] = useState(links[0].link);
 
   const items = links.map((link) => (
-    <a
+    <Link
       key={link.label}
       href={link.link}
       className={classes.link}
@@ -35,7 +36,7 @@ export default function Nav(props: any) {
       }}
     >
       {link.label}
-    </a>
+    </Link>
   ));
 
   return (

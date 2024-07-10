@@ -77,7 +77,7 @@ export default function Page3() {
                 </Group>
                 <Group justify="space-between">
                     {info.map((item: IInfo, index: number) => (
-                        <Group wrap="nowrap" align="flex-start" justify="space-between" gap="lg" style={{
+                        <Group wrap="nowrap" key={index} align="flex-start" justify="space-between" gap="lg" style={{
                             width: '45%',
                         }}>
                             <Image src={item.avatar} alt={item.title} width={800} height={500} style={{
@@ -107,7 +107,7 @@ export default function Page3() {
                     width: '100%'
                 }}>
                     {info.map((item: IInfo, index: number) => (
-                        <Group wrap="nowrap" align="flex-start" justify="space-between" gap="lg" style={{
+                        <Group wrap="nowrap" key={index} align="flex-start" justify="space-between" gap="lg" style={{
                             width: '100%',
                         }}>
                             <Image src={item.avatar} alt={item.title} width={800} height={500} style={{

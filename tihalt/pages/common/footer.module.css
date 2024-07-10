@@ -1,0 +1,24 @@
+.body {
+    background-color: #202020;
+    padding-top: 10vh;
+    padding-bottom: 5vh;
+}
+
+.full {
+    height: 100%;
+}
+
+.copyright {
+    background-color: #181818;
+    width: 100%;
+    padding: 3vh 0;
+    text-align: center;
+}
+
+.hover {
+    transition: color 0.3s ease-in-out;
+}
+
+.hover:hover {
+    color: #7288cc;
+}

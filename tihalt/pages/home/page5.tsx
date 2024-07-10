@@ -14,7 +14,7 @@ export default function Page5() {
     const info: IInfo[] = [
         {
             avatar: faPenToSquare,
-            title: 'CONTENT WRITING',
+            title: 'CONTENT MARKETING',
             description: 'Content marketing is a strategy to create valuable and relevant content to attract customers to drive profitable customer action.'
         },
         {
@@ -62,7 +62,7 @@ export default function Page5() {
                     <Text size='md' className={classes.description}>Our SEO services offer a visible and effective search presence leading to a considerable increase in sales, profitability, and cost efficiency for our clients.</Text>
                     <Group gap="lg" align="stretch">
                         {info.map((item, index) => (
-                            <Stack gap="lg" style={{
+                            <Stack gap="lg" key={index} style={{
                                 width: '22%',
                             }}>
                                 <Box style={{
@@ -93,7 +93,7 @@ export default function Page5() {
                     <Text size='md' className={classes.description}>Our SEO services offer a visible and effective search presence leading to a considerable increase in sales, profitability, and cost efficiency for our clients.</Text>
                     <Stack gap="lg" align="stretch">
                         {info.map((item, index) => (
-                            <Stack gap="lg" style={{
+                            <Stack gap="lg" key={index} style={{
                                 width: '100%',
                             }}>
                                 <Box style={{
