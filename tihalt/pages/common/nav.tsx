@@ -8,6 +8,7 @@ import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faFacebook, faInstagram, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import Logo from '../../public/logo.webp'
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const links = [
   { link: '/home', label: 'Home' },
@@ -16,8 +17,10 @@ const links = [
 ];
 
 export default function Nav(props: any) {
+  const router = useRouter();
   const [opened, { toggle }] = useDisclosure(false);
-  const [active, setActive] = useState(links[0].link);
+  const [active, setActive] = useState(router.pathname);
+
 
   const items = links.map((link) => (
     <Link
@@ -31,7 +34,7 @@ export default function Nav(props: any) {
         alignItems: 'center',
       }}
       onClick={(event) => {
-        event.preventDefault();
+        // event.preventDefault();
         setActive(link.link);
       }}
     >

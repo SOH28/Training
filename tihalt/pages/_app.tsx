@@ -3,6 +3,8 @@ import Head from "next/head";
 import { MantineProvider } from "@mantine/core";
 import { theme } from "../theme";
 
+import Wrapper from "./common/wrapper/Wrapper";
+
 export default function App({ Component, pageProps }: any) {
   return (
     <MantineProvider theme={theme}>
@@ -14,7 +16,9 @@ export default function App({ Component, pageProps }: any) {
         />
         <link rel="shortcut icon" href="https://i0.wp.com/tihalt.com/wp-content/uploads/2019/05/cropped-favicon-1.png?fit=180%2C180&ssl=1" />
       </Head>
+      <Wrapper>
       <Component {...pageProps} />
+      </Wrapper>
     </MantineProvider>
   );
 }

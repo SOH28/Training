@@ -5,7 +5,7 @@ import Formatter from './common/formatter';
 import { AnimatePresence, motion } from "framer-motion"
 
 export default function Page6() {
-    const [select, setSelect] = useState(-1);
+    const [select, setSelect] = useState(0);
 
     interface Roadmap {
         title: string;
