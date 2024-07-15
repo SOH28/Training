@@ -18,7 +18,7 @@ const links = [
 
 export default function Nav(props: any) {
   const router = useRouter();
-  const [opened, { toggle }] = useDisclosure(false);
+  const [opened, { toggle, close }] = useDisclosure(false);
   const [active, setActive] = useState(router.pathname);
 
 
@@ -36,6 +36,7 @@ export default function Nav(props: any) {
       onClick={(event) => {
         // event.preventDefault();
         setActive(link.link);
+        close();
       }}
     >
       {link.label}

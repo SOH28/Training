@@ -108,13 +108,13 @@ export default function Page6() {
                             >
                                 <Stack gap="xl">
                                     <Text c='white' fw={700} size='xl' className='animatedElement'>{roadmap[select].title}</Text>
-                                    <Text className='animatedElement'><Formatter text={roadmap[select].description} style={{
+                                    <span className='animatedElement'><Formatter text={roadmap[select].description} style={{
                                         color: '#a6aafb',
                                         textAlign: 'justify',
                                         lineHeight: '1.7',
                                         fontWeight: 500,
                                         fontSize: 'var(--text-fz, var(--mantine-font-size-xl))'
-                                    }}></Formatter></Text>
+                                    }}></Formatter></span>
                                 </Stack>
                             </motion.div>
                         )}
@@ -164,13 +164,13 @@ export default function Page6() {
                             >
                                 <Stack gap="md">
                                     <Text c='white' fw={700} size='sm' className='animatedElement'>{roadmap[select].title}</Text>
-                                    <Text className='animatedElement'><Formatter text={roadmap[select].description} style={{
+                                    <span className='animatedElement'><Formatter text={roadmap[select].description} style={{
                                         color: '#a6aafb',
                                         textAlign: 'justify',
                                         lineHeight: '1.7',
                                         fontWeight: 500,
                                         fontSize: 'var(--text-fz, var(--mantine-font-size-xs))'
-                                    }}></Formatter></Text>
+                                    }}></Formatter></span>
                                 </Stack>
                             </motion.div>
                         )}
