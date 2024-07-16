@@ -3,6 +3,7 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { ChatroomComponent } from './components/chatroom/chatroom.component';
 import { DevComponent } from './components/dev/dev.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 export const routes: Routes = [
     {
@@ -22,8 +23,8 @@ export const routes: Routes = [
                 component: ChatroomComponent
             },
             {
-                path: 'home',
-                component: DevComponent
+                path: 'community',
+                component: ProfileComponent
             },
             {
                 path: 'notification',
