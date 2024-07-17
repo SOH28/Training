@@ -1,0 +1,64 @@
+<section class="bg-[#EFF6FC] w-[100vw] h-[100vh] flex items-center">
+    <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0 w-full">
+        <a href="#" class="flex items-center mb-6 text-2xl font-semibold text-gray-900 gap-4">
+            <svg _ngcontent-ng-c249881476="" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 223 236" width="32" class="angular-logo"><g _ngcontent-ng-c249881476="" clip-path="url(#a)"><path _ngcontent-ng-c249881476="" fill="url(#b)" d="m222.077 39.192-8.019 125.923L137.387 0l84.69 39.192Zm-53.105 162.825-57.933 33.056-57.934-33.056 11.783-28.556h92.301l11.783 28.556ZM111.039 62.675l30.357 73.803H80.681l30.358-73.803ZM7.937 165.115 0 39.192 84.69 0 7.937 165.115Z"></path><path _ngcontent-ng-c249881476="" fill="url(#c)" d="m222.077 39.192-8.019 125.923L137.387 0l84.69 39.192Zm-53.105 162.825-57.933 33.056-57.934-33.056 11.783-28.556h92.301l11.783 28.556ZM111.039 62.675l30.357 73.803H80.681l30.358-73.803ZM7.937 165.115 0 39.192 84.69 0 7.937 165.115Z"></path></g><defs _ngcontent-ng-c249881476=""><linearGradient _ngcontent-ng-c249881476="" id="b" x1="49.009" x2="225.829" y1="213.75" y2="129.722" gradientUnits="userSpaceOnUse"><stop _ngcontent-ng-c249881476="" stop-color="#E40035"></stop><stop _ngcontent-ng-c249881476="" offset=".24" stop-color="#F60A48"></stop><stop _ngcontent-ng-c249881476="" offset=".352" stop-color="#F20755"></stop><stop _ngcontent-ng-c249881476="" offset=".494" stop-color="#DC087D"></stop><stop _ngcontent-ng-c249881476="" offset=".745" stop-color="#9717E7"></stop><stop _ngcontent-ng-c249881476="" offset="1" stop-color="#6C00F5"></stop></linearGradient><linearGradient _ngcontent-ng-c249881476="" id="c" x1="41.025" x2="156.741" y1="28.344" y2="160.344" gradientUnits="userSpaceOnUse"><stop _ngcontent-ng-c249881476="" stop-color="#FF31D9"></stop><stop _ngcontent-ng-c249881476="" offset="1" stop-color="#FF5BE1" stop-opacity="0"></stop></linearGradient><clipPath _ngcontent-ng-c249881476="" id="a"><path _ngcontent-ng-c249881476="" fill="#fff" d="M0 0h223v236H0z"></path></clipPath></defs></svg>
+            Chatty  
+        </a>
+        <div class="w-full rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 bg-[#6E00FF] drop-shadow-md">
+            <div class="p-6 space-y-4 md:space-y-6 sm:p-8 outline-none border-none">
+                <h1 class="text-xl font-bold leading-tight tracking-tight text-white">
+                    Regsiter new account
+                </h1>
+                <form class="space-y-4 md:space-y-6" action="#">
+                    <div>
+                        <label for="name" class="block mb-2 text-sm font-medium text-white">Your Full Name</label>
+                        <input type="text" name="name" id="name" [(ngModel)]="signupData.name" class="bg-[#EFF6FC] text-gray-900 rounded-lg outline-none border-none w-full p-2.5" placeholder="Chatty" required [style]="{outline:(error && error[1]) == 'name' ? '1px solid red': 'none'}">
+                    </div>
+                    <div>
+                        <label for="email" class="block mb-2 text-sm font-medium text-white">Your email</label>
+                        <input type="text" name="email" id="email" [(ngModel)]="signupData.email" class="bg-[#EFF6FC] text-gray-900 rounded-lg outline-none border-none w-full p-2.5" placeholder="name@company.com" required [style]="{outline:(error && error[1]) == 'email' ? '1px solid red': 'none'}">
+                    </div>
+                    <div>
+                        <label for="email" class="block mb-2 text-sm font-medium text-white">Username</label>
+                        <input type="text" name="username" id="username" [(ngModel)]="signupData.username" class="bg-[#EFF6FC] text-gray-900 rounded-lg outline-none border-none w-full p-2.5" placeholder="username" required [style]="{outline:(error && error[1]) == 'username' ? '1px solid red': 'none'}">
+                    </div>
+                    <div>
+                        <label for="password" class="block mb-2 text-sm font-medium text-white">New Password</label>
+                        <div class="relative">
+                            <button class="absolute inset-y-0 end-4 flex items-center ps-3 z-20" (click)="toggleP=!toggleP">
+                                @if(toggleP) {
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 11C4.80285 11 2.52952 9.62184 1.09622 7.50001C2.52952 5.37816 4.80285 4 7.5 4C10.1971 4 12.4705 5.37816 13.9038 7.50001C12.4705 9.62183 10.1971 11 7.5 11ZM7.5 3C4.30786 3 1.65639 4.70638 0.0760002 7.23501C-0.0253338 7.39715 -0.0253334 7.60288 0.0760014 7.76501C1.65639 10.2936 4.30786 12 7.5 12C10.6921 12 13.3436 10.2936 14.924 7.76501C15.0253 7.60288 15.0253 7.39715 14.924 7.23501C13.3436 4.70638 10.6921 3 7.5 3ZM7.5 9.5C8.60457 9.5 9.5 8.60457 9.5 7.5C9.5 6.39543 8.60457 5.5 7.5 5.5C6.39543 5.5 5.5 6.39543 5.5 7.5C5.5 8.60457 6.39543 9.5 7.5 9.5Z" fill="#9ca3af" clip-rule="evenodd"></path></svg>
+                                } @else {
+                                    <svg width="15" height="15"  viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.3536 2.35355C13.5488 2.15829 13.5488 1.84171 13.3536 1.64645C13.1583 1.45118 12.8417 1.45118 12.6464 1.64645L10.6828 3.61012C9.70652 3.21671 8.63759 3 7.5 3C4.30786 3 1.65639 4.70638 0.0760002 7.23501C-0.0253338 7.39715 -0.0253334 7.60288 0.0760014 7.76501C0.902945 9.08812 2.02314 10.1861 3.36061 10.9323L1.64645 12.6464C1.45118 12.8417 1.45118 13.1583 1.64645 13.3536C1.84171 13.5488 2.15829 13.5488 2.35355 13.3536L4.31723 11.3899C5.29348 11.7833 6.36241 12 7.5 12C10.6921 12 13.3436 10.2936 14.924 7.76501C15.0253 7.60288 15.0253 7.39715 14.924 7.23501C14.0971 5.9119 12.9769 4.81391 11.6394 4.06771L13.3536 2.35355ZM9.90428 4.38861C9.15332 4.1361 8.34759 4 7.5 4C4.80285 4 2.52952 5.37816 1.09622 7.50001C1.87284 8.6497 2.89609 9.58106 4.09974 10.1931L9.90428 4.38861ZM5.09572 10.6114L10.9003 4.80685C12.1039 5.41894 13.1272 6.35031 13.9038 7.50001C12.4705 9.62183 10.1971 11 7.5 11C6.65241 11 5.84668 10.8639 5.09572 10.6114Z" fill="#9ca3af" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                                }
+                            </button>
+                            <input [type]="toggleP?'text':'password'" name="password" id="password" [(ngModel)]="signupData.password" placeholder="••••••••" class="bg-[#EFF6FC] text-gray-900 rounded-lg outline-none border-none w-full p-2.5 z-10 relative" required [style]="{outline:(error && error[1]) == 'password' ? '1px solid red': 'none'}">
+                        </div>                        
+                    </div>
+                    <div class="relative">
+                        <label for="repassword" class="block mb-2 text-sm font-medium text-white">Retype New Password</label>
+                        <div class="relative">
+                            <button class="absolute inset-y-0 end-4 flex items-center ps-3" (click)="toggleRP=!toggleRP">
+                                @if(toggleRP) {
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 11C4.80285 11 2.52952 9.62184 1.09622 7.50001C2.52952 5.37816 4.80285 4 7.5 4C10.1971 4 12.4705 5.37816 13.9038 7.50001C12.4705 9.62183 10.1971 11 7.5 11ZM7.5 3C4.30786 3 1.65639 4.70638 0.0760002 7.23501C-0.0253338 7.39715 -0.0253334 7.60288 0.0760014 7.76501C1.65639 10.2936 4.30786 12 7.5 12C10.6921 12 13.3436 10.2936 14.924 7.76501C15.0253 7.60288 15.0253 7.39715 14.924 7.23501C13.3436 4.70638 10.6921 3 7.5 3ZM7.5 9.5C8.60457 9.5 9.5 8.60457 9.5 7.5C9.5 6.39543 8.60457 5.5 7.5 5.5C6.39543 5.5 5.5 6.39543 5.5 7.5C5.5 8.60457 6.39543 9.5 7.5 9.5Z" fill="#9ca3af" clip-rule="evenodd"></path></svg>
+                                } @else {
+                                    <svg width="15" height="15"  viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.3536 2.35355C13.5488 2.15829 13.5488 1.84171 13.3536 1.64645C13.1583 1.45118 12.8417 1.45118 12.6464 1.64645L10.6828 3.61012C9.70652 3.21671 8.63759 3 7.5 3C4.30786 3 1.65639 4.70638 0.0760002 7.23501C-0.0253338 7.39715 -0.0253334 7.60288 0.0760014 7.76501C0.902945 9.08812 2.02314 10.1861 3.36061 10.9323L1.64645 12.6464C1.45118 12.8417 1.45118 13.1583 1.64645 13.3536C1.84171 13.5488 2.15829 13.5488 2.35355 13.3536L4.31723 11.3899C5.29348 11.7833 6.36241 12 7.5 12C10.6921 12 13.3436 10.2936 14.924 7.76501C15.0253 7.60288 15.0253 7.39715 14.924 7.23501C14.0971 5.9119 12.9769 4.81391 11.6394 4.06771L13.3536 2.35355ZM9.90428 4.38861C9.15332 4.1361 8.34759 4 7.5 4C4.80285 4 2.52952 5.37816 1.09622 7.50001C1.87284 8.6497 2.89609 9.58106 4.09974 10.1931L9.90428 4.38861ZM5.09572 10.6114L10.9003 4.80685C12.1039 5.41894 13.1272 6.35031 13.9038 7.50001C12.4705 9.62183 10.1971 11 7.5 11C6.65241 11 5.84668 10.8639 5.09572 10.6114Z" fill="#9ca3af" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                                }
+                            </button>
+                            <input [type]="toggleRP?'text':'password'" name="repassword" id="repassword" [(ngModel)]="signupData.retypePassword" placeholder="••••••••" class="bg-[#EFF6FC] text-gray-900 rounded-lg outline-none border-none w-full p-2.5" required [style]="{outline:(error && error[1]) == 'repassword' ? '1px solid red': 'none'}">
+                        </div>
+                    </div>
+                    <button type="submit" class="w-full text-white bg-[#5322BC]/50 hover:scale-105 transition-all focus:scale-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center" (click)="onSignup()">Register</button>
+                    <p class="text-sm font-light text-white">
+                        ALready have a account? <a href="/login" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign In</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+        @if(error[0]) {
+            <div class="mt-4 text-red-500 text-sm font-semibold">
+                {{ error[0] }}
+            </div>
+        }
+    </div>
+  </section>

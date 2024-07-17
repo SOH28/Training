@@ -1,0 +1,29 @@
+{
+    "user": {
+        "accept": "Your application for Whitelist Application has been accepted and you are now a Whitelisted Player of HalkaGorib Roleplay. I hope you will have a great time with us. Thanks!",
+        "acceptwithreason": "Your application for Whitelist Application has been accepted and you are now a Whitelisted Player of HalkaGorib Roleplay. I hope you will have a great time with us. Thanks!\n\n**Message From Team:** ```{reason}```",
+        "deny": "**Application denied\nReason provided by application reviewer:** ```{reason}```"
+    },
+    "guild": {
+        "accept": "{approveby} Has Accepted the Whitelist Application of <@{user}>",
+        "acceptwithreason": "{approveby} Has Accepted the Whitelist Application of <@{user}>\n\n**Reason Provided:** ```{reason}```",
+        "deny": "{approveby} Has Denied the Whitelist Application of <@{user}>.\n\n**Reason Provided:** ```{reason}```"
+    },
+    "remove": {
+        "user": "Your Whitelist have been revoked. Please contact the support team for more information. Thank You!.\n**Reason:** ```{reason}```",
+        "guild": "{approveby} Has Revoked the Whitelist of <@{user}> for **{reason}**"
+    },
+    "suspend": {
+        "user": "Your Whitelist have been suspended. Please contact the support team for more information. Thank You!\n**Reason:** ```{reason}```",
+        "guild": "{approveby} Has Suspended the Whitelist Role of <@{user}>"
+    },
+    "restore": {
+        "user": "Your Whitelist have been restored. Thank You!",
+        "guild": "{approveby} Has Restored the Whitelist Role of <@{user}>"
+    },
+    "color": {
+        "accept": "Green",
+        "deny": "Red",
+        "acceptwithreason": "Yellow"
+    }
+}

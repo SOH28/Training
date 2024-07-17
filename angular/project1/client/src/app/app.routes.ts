@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { ChatroomComponent } from './components/chatroom/chatroom.component';
 import { DevComponent } from './components/dev/dev.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { SignupComponent } from './signup/signup.component';
 
 export const routes: Routes = [
     {
@@ -35,5 +36,9 @@ export const routes: Routes = [
                 component: DevComponent
             }
         ]
+    },
+    {
+        path: 'signup',
+        component: SignupComponent
     }
 ];

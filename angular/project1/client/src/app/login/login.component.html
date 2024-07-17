@@ -11,17 +11,26 @@
                 </h1>
                 <form class="space-y-4 md:space-y-6" action="#">
                     <div>
-                        <label for="email" class="block mb-2 text-sm font-medium text-white">Your email</label>
-                        <input type="email" name="email" id="email" class="bg-[#EFF6FC] text-gray-900 rounded-lg outline-none border-none w-full p-2.5" placeholder="name@company.com" required="">
+                        <label for="email" class="block mb-2 text-sm font-medium text-white">Your email/username</label>
+                        <input type="text" name="email" id="email" [(ngModel)]="loginData.username" class="bg-[#EFF6FC] text-gray-900 rounded-lg outline-none border-none w-full p-2.5" placeholder="name@company.com" required>
                     </div>
                     <div>
                         <label for="password" class="block mb-2 text-sm font-medium text-white">Password</label>
-                        <input type="password" name="password" id="password" placeholder="••••••••" class="bg-[#EFF6FC] text-gray-900 rounded-lg outline-none border-none w-full p-2.5" required="">
+                        <div class="relative">
+                            <button class="absolute inset-y-0 end-4 flex items-center ps-3 z-20" (click)="toggleP=!toggleP">
+                                @if(toggleP) {
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 11C4.80285 11 2.52952 9.62184 1.09622 7.50001C2.52952 5.37816 4.80285 4 7.5 4C10.1971 4 12.4705 5.37816 13.9038 7.50001C12.4705 9.62183 10.1971 11 7.5 11ZM7.5 3C4.30786 3 1.65639 4.70638 0.0760002 7.23501C-0.0253338 7.39715 -0.0253334 7.60288 0.0760014 7.76501C1.65639 10.2936 4.30786 12 7.5 12C10.6921 12 13.3436 10.2936 14.924 7.76501C15.0253 7.60288 15.0253 7.39715 14.924 7.23501C13.3436 4.70638 10.6921 3 7.5 3ZM7.5 9.5C8.60457 9.5 9.5 8.60457 9.5 7.5C9.5 6.39543 8.60457 5.5 7.5 5.5C6.39543 5.5 5.5 6.39543 5.5 7.5C5.5 8.60457 6.39543 9.5 7.5 9.5Z" fill="#9ca3af" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                                } @else {
+                                    <svg width="15" height="15"  viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.3536 2.35355C13.5488 2.15829 13.5488 1.84171 13.3536 1.64645C13.1583 1.45118 12.8417 1.45118 12.6464 1.64645L10.6828 3.61012C9.70652 3.21671 8.63759 3 7.5 3C4.30786 3 1.65639 4.70638 0.0760002 7.23501C-0.0253338 7.39715 -0.0253334 7.60288 0.0760014 7.76501C0.902945 9.08812 2.02314 10.1861 3.36061 10.9323L1.64645 12.6464C1.45118 12.8417 1.45118 13.1583 1.64645 13.3536C1.84171 13.5488 2.15829 13.5488 2.35355 13.3536L4.31723 11.3899C5.29348 11.7833 6.36241 12 7.5 12C10.6921 12 13.3436 10.2936 14.924 7.76501C15.0253 7.60288 15.0253 7.39715 14.924 7.23501C14.0971 5.9119 12.9769 4.81391 11.6394 4.06771L13.3536 2.35355ZM9.90428 4.38861C9.15332 4.1361 8.34759 4 7.5 4C4.80285 4 2.52952 5.37816 1.09622 7.50001C1.87284 8.6497 2.89609 9.58106 4.09974 10.1931L9.90428 4.38861ZM5.09572 10.6114L10.9003 4.80685C12.1039 5.41894 13.1272 6.35031 13.9038 7.50001C12.4705 9.62183 10.1971 11 7.5 11C6.65241 11 5.84668 10.8639 5.09572 10.6114Z" fill="#9ca3af" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                                }
+                            </button>
+                            <input [type]="toggleP?'text':'password'" name="password" id="password" [(ngModel)]="loginData.password" placeholder="••••••••" class="bg-[#EFF6FC] text-gray-900 rounded-lg outline-none border-none w-full p-2.5" required minlength="8">
+                        </div>
                     </div>
                     <div class="flex items-center justify-between">
                         <div class="flex items-start">
                             <div class="flex items-center h-5">
-                              <input id="remember" aria-describedby="remember" type="checkbox" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800" required="">
+                              <input id="remember" aria-describedby="remember" type="checkbox" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800" >
                             </div>
                             <div class="ml-3 text-sm">
                               <label for="remember" class="text-gray-500 dark:text-gray-300">Remember me</label>
@@ -31,10 +40,16 @@
                     </div>
                     <button type="submit" class="w-full text-white bg-[#5322BC]/50 hover:scale-105 transition-all focus:scale-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center" (click)="onLogin()">Sign in</button>
                     <p class="text-sm font-light text-white">
-                        Don’t have an account yet? <a href="#" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign up</a>
+                        Don’t have an account yet? <a href="/signup" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign up</a>
                     </p>
                 </form>
             </div>
         </div>
+        @if(error) {
+            <div class="mt-4 text-red-500 text-sm font-semibold">
+                {{ error }}
+            </div>
+        }
     </div>
-  </section>
+</section>
+<router-outlet></router-outlet>
