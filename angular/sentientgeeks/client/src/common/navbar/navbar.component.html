@@ -1,0 +1,13 @@
+<nav class="flex justify-between items-center fixed z-100 top-0 left-0 w-full h-[9vh] p-4 px-10">
+    <a href="/" class="text-2xl font-bold text-white">
+        <img src="https://imgur.com/TPP7K7r.png" alt="logo" class="max-h-[75px]">
+    </a>
+    <div class="flex gap-10 items-center text-[#08182b] text-xl font-normal">
+        @for (tab of tabs; track tab.title) {
+            <a href="{{ tab.link }}" class="hover:text-[#49b1e9]">{{ tab.title }}</a>
+        }
+        <button class="py-3 px-7 rounded-md bg-[#0e57a5] w-fit h-fit">
+            <a href="/contact" class="text-white font-bold text-xl">Contact Us</a>
+        </button>
+    </div>
+</nav>

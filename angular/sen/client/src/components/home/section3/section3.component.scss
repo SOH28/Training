@@ -1,0 +1,37 @@
+.arrow {
+    width: 30px;
+    height: 2px;
+    background-color: #0e57a5;
+    position: relative;
+}
+
+.shadow {
+    box-shadow: 5px 5px 17px 0 rgba(14,87,165,.14);
+}
+
+
+.learn:hover {
+    flex-direction: row-reverse;
+}
+
+.arrow::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    background-color: #0e57a5;
+    transform: rotate(45deg);
+    top: -3px;
+    right: -2px;
+}
+
+.arrow::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    background-color: #0e57a5;
+    transform: rotate(-45deg);
+    top: 3px;
+    right: -2px;
+}

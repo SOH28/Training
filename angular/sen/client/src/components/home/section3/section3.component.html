@@ -1,0 +1,20 @@
+<div class="flex flex-col px-[13vw] py-[4vh] h-auto bg-[#f9fafb]">
+    <span class="text-[2.25rem] font-bold text-[#0e57a5] font-poppins text-center mb-[2vh]">What We Can <span class="text-[#dd4a48]">Offer</span></span>
+    <span class="text-center text-[#747078] text-[1.125rem] px-[12vw] mb-[4vh]">Grow your business online with our ROI driven solutions. Our web application development company offers scalable, intuitive & easy to maintain applications. Being a one-stop service provider, we take care of your IT needs right from scratch.</span>
+
+    <div class="flex justify-between flex-wrap">
+        @for (offer of offers; track offer) {
+            <div class="flex flex-col items-stretch p-10 w-[32%] bg-white shadow rounded-lg mb-[6vh] justify-between relative">
+                <div class="flex justify-center items-center absolute left-[2vw] top-[-4vh] bg-white shadow-md p-4 w-[4.2vw] h-[4.2vw] rounded-lg">
+                    <img src="{{offer.avatar}}" alt="avatar">
+                </div>
+                <span class="text-[1.5rem] text-[#0e57a5] font-bold mt-[2vh]">{{offer.title}}</span>
+                <span class="text-[#747078] text-[1.125rem] my-[2vh]">{{offer.msg}}</span>
+                <button class="flex gap-4 font-bold text-[1.125rem] text-[#0e57a5] items-center learn transition-all duration-200 w-fit">
+                    <span>Learn More On Us</span>
+                    <span class="arrow"></span>
+                </button>
+            </div>
+        }
+    </div>
+</div>

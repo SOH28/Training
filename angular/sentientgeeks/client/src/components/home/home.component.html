@@ -1,0 +1,26 @@
+<div class="flex justify-between items-center px-[13vw] py-[4vh] h-auto bg-[#0e57a5] mt-[9vh]">
+    <div class="flex flex-col gap-[0] text-white">
+        <span class="text-[2vw] text-white mb-2">We Build</span>
+        <p-carousel
+            [value]="['secured', 'optimized', 'scalable', 'testable']"
+            [numVisible]="1"
+            [numScroll]="1"
+            [circular]="true"
+            orientation="vertical"
+            verticalViewPortHeight='4.4rem'
+            [showNavigators]="false"
+            [showIndicators]="false"
+            [autoplayInterval]="2000"
+        >
+            <ng-template let-item pTemplate="item"> 
+                <span class="text-[4.3rem] leading-[4.4rem] text-white font-extrabold tracking-wide font-poppins uppercase">{{item}}</span>
+            </ng-template>
+        </p-carousel>
+        <span class="text-[2vw] text-white tracking-tight pb-6 footer-head mt-2">Website and Mobile Apps</span>
+        <span class="text-md font-medium mb-8">SentientGeeks provide end-to-end app development for leading enterprises and startups worldwide.</span>
+        <button class="py-3 px-6 bg-white text-[#0e57a5] font-bold text-lg rounded-md w-fit">
+            LETS CONNECT
+        </button>
+    </div>
+    <img src="https://sentientgeeks.com/images/banner/mobile-ban3.webp" alt="mobile">
+</div>

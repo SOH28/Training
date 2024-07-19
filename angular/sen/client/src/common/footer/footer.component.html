@@ -1,0 +1,49 @@
+<footer class="w-full h-auto bgContainer">
+    <section class="border-b-[1px] border-white flex justify-between items-stretch px-[13vw] py-[4vh]">
+        @for (data of footerInfo; track data.title) {
+            <div>
+                <h2 class="text-[1.5rem] font-bold text-white">{{ data.title }}</h2>
+                <div class="mt-[1.5rem] flex flex-col flex-wrap max-h-[26vh] gap-3">
+                    @for (item of data.items; track item) {
+                        <span class="text-white text-[1rem]">
+                            <span class="flex items-center">
+                                @if(item.avatar) {
+                                    <img class="w-[1.56vw] h-[2.33h] mr-[0.5rem]" src="{{ item.avatar }}" alt="avatar">
+                                }
+                                <a [href]="item.href" class="text-[#d8d6d6] text-[1rem]">{{ item.msg }}</a>
+                            </span>
+                        </span>
+                    }
+                </div>
+            </div>
+        }
+        <div class="w-[20%]">
+            <h2 class="text-[1.5rem] font-bold text-white">GLOBAL LOCATIONS</h2>
+            <div class="mt-[1.5rem] flex flex-col flex-wrap max-h-[26vh] gap-3">
+                <span class="text-white text-[1rem]">
+                    <div class="text-[#d8d6d6] text-[1rem] flex flex-col">
+                        <div class="text-white mb-2">SentientGeeks (Canada)</div>
+                        <div class="mb-6">5484 Tomken Road, Unit 32 Mississauga, Ontario Canada L4W 2Z6</div>
+                        <div class="text-white mb-2">SentientGeeks (India)</div>
+                        <div class="mb-6">906, Webel IT Park, Tower I, BN Block, Sector V, Kolkata – 700091</div>
+                    </div>
+                </span>
+            </div>
+        </div>
+    </section>
+    <section class="flex items-center justify-between px-[13vw] py-4">
+        <div class="text-[1rem] text-[#adb7c5]">COPYRIGHTS 2022 © SENTIENTGEEKS SOFTWARE & CONSULTANCY PVT. LTD.</div>
+        <div class="flex gap-4 text-white text-[1.125rem] items-center">
+            <span>Follow us:</span>
+            <a href="https://www.linkedin.com/company/sentientgeeks" target="_blank" class="text-[1.5rem]">
+                <fa-icon [icon]="faLinkedin"></fa-icon>
+            </a>
+            <a href="https://www.facebook.com/sentientgeeks" target="_blank" class="text-[1.5rem]">
+                <fa-icon [icon]="faFacebook"></fa-icon>
+            </a>
+            <a href="https://www.youtube.com/sentientgeeks" target="_blank" class="text-[1.5rem]">
+                <fa-icon [icon]="faYoutube"></fa-icon>
+            </a>
+        </div>
+    </section>
+</footer>

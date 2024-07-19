@@ -1,0 +1,33 @@
+.arrow {
+    width: 30px;
+    height: 2px;
+    background-color: #0e57a5;
+    position: relative;
+}
+
+
+.learn:hover {
+    flex-direction: row-reverse;
+}
+
+.arrow::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    background-color: #0e57a5;
+    transform: rotate(45deg);
+    top: -3px;
+    right: -2px;
+}
+
+.arrow::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    background-color: #0e57a5;
+    transform: rotate(-45deg);
+    top: 3px;
+    right: -2px;
+}

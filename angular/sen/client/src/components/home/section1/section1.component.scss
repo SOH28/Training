@@ -1,0 +1,12 @@
+.footer-head:after {
+    content: "";
+    width: 15%;
+    height: 2px;
+    display: block;
+    height: 1vh;
+    border-bottom: 3px solid white;
+}
+
+.trans {
+    transition: .8s cubic-bezier(.16, .84, .442, .98);
+}
